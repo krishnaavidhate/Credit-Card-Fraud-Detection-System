@@ -1,1 +1,12 @@
-
+cat > .vercelignore << 'EOF'
+venv/
+env/
+*.csv
+*.ipynb
+notebooks/
+.git/
+__pycache__/
+*.pyc
+tests/
+data/
+EOF
