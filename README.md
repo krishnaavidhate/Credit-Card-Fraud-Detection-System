@@ -142,7 +142,7 @@ Credit Card Fraud Detection System/
 ## 🚀 Installation
 
 ``` bash
-git clone https://github.com/YOUR_USERNAME/Credit-Card-Fraud-Detection-System.git
+git clone https://github.com/krishnaavidhate/Credit-Card-Fraud-Detection-System.git
 
 cd Credit-Card-Fraud-Detection-System
 
