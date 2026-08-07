@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Fraud Detection System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+
+<div class="hero-left">
+
+<div class="logo">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h1>
+
+Credit Card Fraud Detection System
+
+</h1>
+
+</div>
+
+<p>
+
+Secure transaction analysis using supervised machine learning models.
+
+</p>
+
+<div class="tech-stack">
+
+<span>🐍 Python</span>
+
+<span>🌐 Flask</span>
+
+<span>📊 Scikit-Learn</span>
+
+<span>⚡ XGBoost</span>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="status-card">
+
+<span class="status-dot"></span>
+
+Model Ready
+
+</div>
+
+</div>
+
+</header>
+    <!-- ================= KPI ================= -->
+
+<section class="kpi-grid">
+
+<div class="kpi-card">
+
+<i class="fa-solid fa-bullseye"></i>
+
+<h2>99.95%</h2>
+
+<p>Accuracy</p>
+
+</div>
+
+<div class="kpi-card">
+
+<i class="fa-solid fa-crosshairs"></i>
+
+<h2>99.92%</h2>
+
+<p>Precision</p>
+
+</div>
+
+<div class="kpi-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h2>99.88%</h2>
+
+<p>Recall</p>
+
+</div>
+
+<div class="kpi-card">
+
+<i class="fa-solid fa-award"></i>
+
+<h2>99.90%</h2>
+
+<p>F1 Score</p>
+
+</div>
+
+</section>
+
+<form action="/predict" method="POST">
+    <section class="card">
+
+<div class="section-header">
+
+<h2>
+
+🤖 Select Prediction Model
+
+</h2>
+
+<span class="recommended">
+
+🏆 Recommended
+
+</span>
+
+</div>
+
+<div class="model-grid">
+
+<label class="model-card">
+
+<input
+type="radio"
+name="model"
+value="Logistic Regression">
+
+<div>
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>
+
+Logistic Regression
+
+</h3>
+
+<p>
+
+Fast & Lightweight
+
+</p>
+
+</div>
+
+</label>
+
+<label class="model-card">
+
+<input
+type="radio"
+name="model"
+value="Random Forest"
+checked>
+
+<div class="best-model">
+
+<span class="badge">
+
+🏆 Best Model
+
+</span>
+
+<i class="fa-solid fa-tree"></i>
+
+<h3>
+
+Random Forest
+
+</h3>
+
+<p>
+
+Highest Accuracy
+
+</p>
+
+</div>
+
+</label>
+
+<label class="model-card">
+
+<input
+type="radio"
+name="model"
+value="XGBoost">
+
+<div>
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>
+
+XGBoost
+
+</h3>
+
+<p>
+
+Boosted Trees
+
+</p>
+
+</div>
+
+</label>
+
+</div>
+
+</section>
+    <!-- ====================================== -->
+<!-- TRANSACTION INFORMATION -->
+<!-- ====================================== -->
+
+<section class="card">
+
+<div class="section-header">
+
+<h2>
+
+💳 Transaction Information
+
+</h2>
+
+</div>
+
+<div class="basic-grid">
+
+<div class="input-group">
+
+<label>
+
+Time
+
+</label>
+
+<input
+id="Time"
+name="Time"
+type="number"
+step="any"
+placeholder="Enter Time"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Amount
+
+</label>
+
+<input
+id="Amount"
+name="Amount"
+type="number"
+step="any"
+placeholder="Enter Amount"
+required>
+
+</div>
+
+</div>
+
+<!-- ====================================== -->
+<!-- ADVANCED FEATURES -->
+<!-- ====================================== -->
+
+<div class="accordion">
+
+<button
+type="button"
+class="accordion-btn"
+onclick="toggleAccordion()">
+
+<span>
+
+Advanced Features (V1 - V28)
+
+</span>
+
+<i
+id="arrow"
+class="fa-solid fa-chevron-down">
+
+</i>
+
+</button>
+
+<div
+id="advancedFeatures"
+class="accordion-content">
+
+<div class="feature-grid">
+    <input id="V1" name="V1" type="number" step="any" placeholder="V1" required>
+
+<input id="V2" name="V2" type="number" step="any" placeholder="V2" required>
+
+<input id="V3" name="V3" type="number" step="any" placeholder="V3" required>
+
+<input id="V4" name="V4" type="number" step="any" placeholder="V4" required>
+
+<input id="V5" name="V5" type="number" step="any" placeholder="V5" required>
+
+<input id="V6" name="V6" type="number" step="any" placeholder="V6" required>
+
+<input id="V7" name="V7" type="number" step="any" placeholder="V7" required>
+
+<input id="V8" name="V8" type="number" step="any" placeholder="V8" required>
+
+<input id="V9" name="V9" type="number" step="any" placeholder="V9" required>
+
+<input id="V10" name="V10" type="number" step="any" placeholder="V10" required>
+
+<input id="V11" name="V11" type="number" step="any" placeholder="V11" required>
+
+<input id="V12" name="V12" type="number" step="any" placeholder="V12" required>
+
+<input id="V13" name="V13" type="number" step="any" placeholder="V13" required>
+
+<input id="V14" name="V14" type="number" step="any" placeholder="V14" required>
+    <input id="V15" name="V15" type="number" step="any" placeholder="V15" required>
+
+<input id="V16" name="V16" type="number" step="any" placeholder="V16" required>
+
+<input id="V17" name="V17" type="number" step="any" placeholder="V17" required>
+
+<input id="V18" name="V18" type="number" step="any" placeholder="V18" required>
+
+<input id="V19" name="V19" type="number" step="any" placeholder="V19" required>
+
+<input id="V20" name="V20" type="number" step="any" placeholder="V20" required>
+
+<input id="V21" name="V21" type="number" step="any" placeholder="V21" required>
+
+<input id="V22" name="V22" type="number" step="any" placeholder="V22" required>
+
+<input id="V23" name="V23" type="number" step="any" placeholder="V23" required>
+
+<input id="V24" name="V24" type="number" step="any" placeholder="V24" required>
+
+<input id="V25" name="V25" type="number" step="any" placeholder="V25" required>
+
+<input id="V26" name="V26" type="number" step="any" placeholder="V26" required>
+
+<input id="V27" name="V27" type="number" step="any" placeholder="V27" required>
+
+<input id="V28" name="V28" type="number" step="any" placeholder="V28" required>
+
+</div>
+
+</div>
+
+</section>
+    <section class="card">
+
+<div class="section-header">
+
+<h2>
+
+⚡ Quick Actions
+
+</h2>
+
+</div>
+
+<div class="action-grid">
+
+<button
+type="button"
+class="btn btn-success"
+onclick="fillLegitimate()">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Demo Legitimate
+
+</button>
+
+<button
+type="button"
+class="btn btn-danger"
+onclick="fillFraud()">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+Demo Fraud
+
+</button>
+
+<button
+type="button"
+class="btn btn-secondary"
+onclick="resetForm()">
+
+<i class="fa-solid fa-rotate-left"></i>
+
+Reset
+
+</button>
+
+</div>
+
+<button
+type="submit"
+class="predict-btn">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+Predict Transaction
+
+</button>
+
+</section>
+    <section class="card">
+
+<div class="section-header">
+
+<h2>
+
+📊 Model Performance
+
+</h2>
+
+</div>
+
+<div class="performance-card">
+
+<div class="performance-row">
+
+<span>Random Forest</span>
+
+<div class="performance-bar">
+
+<div class="performance-fill rf"
+style="width:99.95%;"></div>
+
+</div>
+
+<strong>99.95%</strong>
+
+</div>
+
+<div class="performance-row">
+
+<span>XGBoost</span>
+
+<div class="performance-bar">
+
+<div class="performance-fill xgb"
+style="width:99.92%;"></div>
+
+</div>
+
+<strong>99.92%</strong>
+
+</div>
+
+<div class="performance-row">
+
+<span>Logistic Regression</span>
+
+<div class="performance-bar">
+
+<div class="performance-fill lr"
+style="width:97.48%;"></div>
+
+</div>
+
+<strong>97.48%</strong>
+
+</div>
+
+</div>
+
+</section>
+
+</form>
+    {% if prediction %}
+
+<section id="result" class="result-card">
+
+<div class="result-header">
+
+<h2>
+
+Prediction Result
+
+</h2>
+
+</div>
+
+{% if "Fraud" in prediction %}
+
+<div class="prediction-status fraud-status">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+<h1>
+
+{{ prediction }}
+
+</h1>
+
+<p>
+
+🚨 High Risk Transaction
+
+</p>
+
+</div>
+
+{% else %}
+
+<div class="prediction-status safe-status">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h1>
+
+{{ prediction }}
+
+</h1>
+
+<p>
+
+✅ Low Risk Transaction
+
+</p>
+
+</div>
+
+{% endif %}
+
+<div class="result-grid">
+
+<div class="result-box">
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>
+
+Selected Model
+
+</h3>
+
+<p>
+
+{{ selected_model }}
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>
+
+Confidence
+
+</h3>
+
+<p>
+
+{{ confidence }}%
+
+</p>
+
+<div class="progress">
+
+<div class="progress-bar"
+
+style="--width:{{ confidence }}%;">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result-box">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>
+
+Risk Level
+
+</h3>
+
+<p>
+
+{% if "Fraud" in prediction %}
+
+High
+
+{% else %}
+
+Low
+
+{% endif %}
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>
+
+Prediction Status
+
+</h3>
+
+<p>
+
+Prediction Completed
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+{% endif %}
+    <footer>
+
+<div class="footer-content">
+
+<h3>
+
+💳 Credit Card Fraud Detection System
+
+</h3>
+
+<p>
+
+Machine Learning Based Fraud Detection
+
+</p>
+
+<div class="tech-stack">
+
+<span>🐍 Python</span>
+
+<span>🌐 Flask</span>
+
+<span>📊 Scikit-Learn</span>
+
+<span>⚡ XGBoost</span>
+
+</div>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+</div>
+
+</footer>
+    {% if prediction %}
+
+<script>
+
+window.onload=function(){
+
+const result=document.getElementById("result");
+
+if(result){
+
+result.scrollIntoView({
+
+behavior:"smooth",
+
+block:"start"
+
+});
+
+}
+
+}
+
+</script>
+
+{% endif %}
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
