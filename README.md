@@ -169,13 +169,19 @@ http://127.0.0.1:5000
 
 ------------------------------------------------------------------------
 
-## 📷 Screenshots
+## 📸 Project Screenshots
 
-Add screenshots in an `images/` folder and reference them here:
+### Dashboard
 
--   Dashboard
--   Prediction Result
--   Model Performance
+![Credit Card Fraud Detection Dashboard](images/dashboard.png)
+
+### Transaction Prediction
+
+![Transaction Prediction](images/prediction.png)
+
+### Fraud Detection Result
+
+![Fraud Detection Result](images/fraud-result.png)
 
 ------------------------------------------------------------------------
 
