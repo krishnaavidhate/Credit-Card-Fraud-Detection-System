@@ -197,9 +197,9 @@ Add screenshots in an `images/` folder and reference them here:
 
 Machine Learning \| Python \| Data Science
 
-GitHub: https://github.com/YOUR_USERNAME
+GitHub: https://github.com/krishnaavidhate
 
-LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+LinkedIn: www.linkedin.com/in/krishna-vidhate-320a43325
 
 Email: YOUR_EMAIL
 
