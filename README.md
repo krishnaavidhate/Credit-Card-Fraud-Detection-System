@@ -55,14 +55,16 @@ prediction with confidence.
 
 **Dataset:** Credit Card Fraud Detection Dataset (Kaggle)
 
-  Item               Value
-  -------------- ---------
-  Transactions     284,807
-  Legitimate       284,315
-  Fraudulent           492
-  Features              30
+🔗 **Dataset Link:** [Download from Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 
-Target: - 0 = Legitimate - 1 = Fraudulent
+| Item | Value |
+|---|---:|
+| Transactions | 284,807 |
+| Legitimate | 284,315 |
+| Fraudulent | 492 |
+| Features | 30 |
+
+**Target:** 0 = Legitimate, 1 = Fraudulent
 
 ------------------------------------------------------------------------
 
