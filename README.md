@@ -89,9 +89,9 @@ Target: - 0 = Legitimate - 1 = Fraudulent
 
   Model                   Accuracy
   --------------------- ----------
-  Logistic Regression       XX.XX%
-  Random Forest             XX.XX%
-  XGBoost                   XX.XX%
+  Logistic Regression       97.48%
+  Random Forest             99.95%
+  XGBoost                   99.92%
 
 Evaluation metrics: - Accuracy - Precision - Recall - F1 Score -
 Confusion Matrix - Classification Report
