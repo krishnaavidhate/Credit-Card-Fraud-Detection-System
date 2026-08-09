@@ -79,22 +79,25 @@ Target: - 0 = Legitimate - 1 = Fraudulent
 
 ## 🤖 Models
 
-  Model                 Description
-  --------------------- ----------------------------
-  Logistic Regression   Baseline linear classifier
-  Random Forest         Ensemble tree model
-  XGBoost               Gradient boosting model
+Three supervised machine learning models were trained and evaluated for credit card fraud detection.
 
-> Replace the values below with your actual results.
+| Model | Description | Accuracy |
+|---|---|---:|
+| Random Forest | Ensemble learning model using multiple decision trees | **99.95%** |
+| XGBoost | Gradient boosting classification model | **99.92%** |
+| Logistic Regression | Linear classification model used as a baseline | **97.48%** |
 
-  Model                   Accuracy
-  --------------------- ----------
-  Logistic Regression       97.48%
-  Random Forest             99.95%
-  XGBoost                   99.92%
+### 📊 Model Performance
 
-Evaluation metrics: - Accuracy - Precision - Recall - F1 Score -
-Confusion Matrix - Classification Report
+- 🌲 **Random Forest:** 99.95%
+- ⚡ **XGBoost:** 99.92%
+- 📈 **Logistic Regression:** 97.48%
+
+### 🏆 Best Performing Model
+
+**Random Forest achieved the highest accuracy of 99.95%.**
+
+> Accuracy alone should not be considered sufficient for fraud detection because fraudulent transactions are highly imbalanced with legitimate transactions. Precision, Recall, and F1-Score are also important evaluation metrics.
 
 ------------------------------------------------------------------------
 
